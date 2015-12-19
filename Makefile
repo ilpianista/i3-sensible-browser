@@ -1,12 +1,13 @@
 INSTALL = /bin/install -c
 DESTDIR =
-bindir = /usr/bin
-mandir = /usr/share/man
+PREFIX = /usr/local
+bindir = /bin
+mandir = /share/man
 
 all:
 
 install: all
-	$(INSTALL) -d $(DESTDIR)$(bindir)
-	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
-	$(INSTALL) -m755 i3-sensible-browser $(DESTDIR)$(bindir)
-	$(INSTALL) -m644 man/i3-sensible-browser.1 $(DESTDIR)$(mandir)/man1
+	$(INSTALL) -d $(DESTDIR)$(PREFIX)$(bindir)
+	$(INSTALL) -d $(DESTDIR)$(PREFIX)$(mandir)/man1
+	$(INSTALL) -m755 i3-sensible-browser $(DESTDIR)$(PREFIX)$(bindir)
+	$(INSTALL) -m644 man/i3-sensible-browser.1 $(DESTDIR)$(PREFIX)$(mandir)/man1
