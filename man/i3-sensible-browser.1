@@ -1,0 +1,63 @@
+.\" i3-sensible-browser(1)
+.\"Andrea Scarpino <me@andreascarpino.it>
+
+.TH i3-sensible-browser 1 "2015" "" "i3-sensible-browser"
+
+.SH NAME
+
+i3-sensible-browser - launches $BROWSER with fallbacks
+
+.SH SYNOPSIS
+
+i3-sensible-browser
+
+.SH DESCRIPTION
+
+i3-sensible-browser could be invoked in the i3 default config to start a browser.
+This wrapper script is necessary since there is no distribution-independent
+browser launcher.
+
+It tries to start one of the following (in that order):
+
+.IP *
+$BROWSER (this is a non-standard variable)
+.IP *
+firefox
+.IP *
+chromium
+.IP *
+google-chrome
+.IP *
+opera
+.IP *
+qupzilla
+.IP *
+konqueror
+.IP *
+firefox-aurora
+.IP *
+luakit
+.IP *
+midori
+.IP *
+epiphany
+.IP *
+lynx
+.IP *
+w3m
+.IP *
+dillo
+.IP *
+elinks
+.PP
+
+Please don’t complain about the order: If the user has any preference, they will
+have $BROWSER set or modified their i3 configuration file.
+
+.SH SEE ALSO
+
+i3(1)
+
+.SH AUTHOR
+
+Andrea Scarpino, inspired by i3-sensible-terminal man page by Michael Stapelberg.
