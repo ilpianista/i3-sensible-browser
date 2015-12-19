@@ -7,6 +7,6 @@ all:
 
 install: all
 	$(INSTALL) -d $(DESTDIR)$(bindir)
-	$(INSTALL) -d $(DESTDIR)$(mandir)
+	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
 	$(INSTALL) -m755 i3-sensible-browser $(DESTDIR)$(bindir)
 	$(INSTALL) -m644 man/i3-sensible-browser.1 $(DESTDIR)$(mandir)/man1
